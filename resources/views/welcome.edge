@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,106 @@
   @entryPointStyles('app')
   @entryPointScripts('app')
 </head>
+
 <body>
 
   <main>
-    <div>
-      <h1 class="title"> It Works! </h1>
-      <p class="subtitle">
-        Congratulations, you have just created your first AdonisJS app.
+    <div class="bg-gray-200 mt-8 mb-8 p-8">
+      <article class="prose lg:prose-xl">
+        <h1 class="text-gray-500 text-6xl">Garlic bread with cheese: What the science tells us</h1>
+        <p>
+          For years parents have espoused the health benefits of eating garlic bread with cheese to their
+          children, with the food earning such an iconic status in our culture that kids will often dress
+          up as warm, cheesy loaf for Halloween.
+        </p>
+        <p>
+          But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
+          springing up around the country.
+        </p>
+        <!-- ... -->
+      </article>
+    </div>
+
+    <div class="bg-gray-200 mt-8 mb-8 p-8">
+      <!-- You can actually customize padding on a select element now: -->
+      <select class="px-4 py-3 rounded-full">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <!-- Or change a checkbox color using text color utilities: -->
+      <input type="checkbox" class="rounded text-pink-500" />
+    </div>
+
+    <div class="bg-gray-200 mt-8 mb-8 p-8">
+      <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+          <select class="form-select appearance-none
+            block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            font-normal
+            text-gray-700
+            bg-white bg-clip-padding bg-no-repeat
+            border border-solid border-gray-300
+            rounded
+            transition
+            ease-in-out
+            m-0
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-200 mt-8 mb-8 p-8">
+      <input type="email" class="form-input px-4 py-3 rounded-full">
+
+      <select class="form-select px-4 py-3 rounded-full">
+        <!-- ... -->
+      </select>
+
+      <input type="checkbox" class="form-checkbox rounded text-pink-500" />
+    </div>
+
+    <div class="bg-gray-200 mt-8 mb-8 p-8">
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QV62YRpIeUA" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="bg-gray-200 mt-8 mb-8 p-8">
+      <p class="line-clamp-3">
+        Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis
+        natus.
+        Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas
+        voluptas
+        dolor cum. Rerum est quos quos id ut molestiae fugit.
       </p>
+    </div>
 
-      <ul>
-        <li>
-          The route for this page is defined inside <code>start/routes.ts</code> file
-        </li>
-
-        <li>
-          You can update this page by editing <code>resources/views/welcome.edge</code> file
-        </li>
-
-        <li>
-          If you run into problems, you can reach us on <a href="https://discord.gg/vDcEjq6?">Discord</a> or the <a href="https://forum.adonisjs.com/">Forum</a>.
-        </li>
-      </ul>
+    <div class="bg-gray-200 mt-8 mb-8 p-8">
+      <p class="line-clamp-3 md:line-clamp-none">
+        Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis
+        natus.
+        Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas
+        voluptas
+        dolor cum. Rerum est quos quos id ut molestiae fugit.
+      </p>
     </div>
   </main>
 </body>
+
 </html>

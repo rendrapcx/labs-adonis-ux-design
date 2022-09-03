@@ -1,5 +1,5 @@
 ## LOGS
-
+### 1. Creating New Project
 ```bash
 npm init adonis-ts-app@latest adonis-ux-design
 ```
@@ -38,3 +38,15 @@ RUNNING TASKS
 
 ```
 
+### 2. Intial Git
+
+### 3. Install TailwindCss & Configure
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npm i -D postcss-loader
+npx tailwindcss init
+npm install -D @tailwindcss/typography
+npm install -D @tailwindcss/forms
+npm install -D @tailwindcss/aspect-ratio
+npm install -D @tailwindcss/line-clamp
+```
