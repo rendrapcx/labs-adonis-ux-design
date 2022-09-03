@@ -50,3 +50,13 @@ npm install -D @tailwindcss/forms
 npm install -D @tailwindcss/aspect-ratio
 npm install -D @tailwindcss/line-clamp
 ```
+
+### 4. Install Configure alpinejs
+```bash
+npm install alpinejs
+```
+
+### 5. install Configure
+```bash
+npm install tw-elements
+```

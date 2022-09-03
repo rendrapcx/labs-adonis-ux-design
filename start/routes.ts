@@ -23,3 +23,12 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', async ({ view }) => {
   return view.render('welcome')
 })
+
+Route.get('/alpine', async ({ view }) => {
+  return view.render('examples/alpine')
+})
+
+Route.get('/tailwind', async ({ view }) => {
+  return view.render('examples/tailwind')
+})
+

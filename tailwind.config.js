@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./resources/**/*.{edge,js,ts,vue,jsx,tsx}"
+    "./resources/**/*.{edge,js,ts,vue,jsx,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
     extend: {},
@@ -22,5 +23,6 @@ module.exports = {
     // }),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),
+    require('tw-elements/dist/plugin')
   ],
 }
