@@ -1,0 +1,21 @@
+@layout('layouts/example')
+
+@section('content')
+<div class="p-16 space-y-8">
+  <div class="p-8">
+    @!component('components/examples/tailwind/chart/bar')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/chart/doughnut')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/chart/line')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/chart/pie')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/chart/radar')
+  </div>
+</div>
+@endsection

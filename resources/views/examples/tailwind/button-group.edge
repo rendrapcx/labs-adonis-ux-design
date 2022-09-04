@@ -1,0 +1,24 @@
+@layout('layouts/example')
+
+@section('content')
+<div class="p-16 space-y-4">
+  <div class="p-8">
+    @!component('components/examples/tailwind/button-group/active')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/button-group/basic')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/button-group/colors')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/button-group/outline')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/button-group/sizing')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/button-group/toolbar')
+  </div>
+</div>
+@endsection

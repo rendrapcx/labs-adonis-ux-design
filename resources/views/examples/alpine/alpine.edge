@@ -1,15 +1,17 @@
 @layout('layouts/example')
 
 @section('content')
-<div x-data="showModal" @keydown.escape="showModal = false">
-  <div><button x-on:click="toggleModal">TES</button></div>
-  <div class="" x-cloak x-show="showModal">
+<div x-data="showModal" @keydown.escape="toggleModal">
+  <div x-on:click="toggleModal">
+    @!form.button({btnText: 'Warning'})
+  </div>
+  <template class="" x-cloak x-if="showModal">
     @!component('components/modal/alp-warning', {
     dialogTitle: "Ari maneh geus yakin?",
     dialogMessage: `Silakan melakukan pendaftaran melalui https://www.test.com untuk bisa melakukan transaksi`,
     btnYes: "OK"
     })
-  </div>
+  </template>
 </div>
 
 @endsection

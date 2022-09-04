@@ -1,0 +1,24 @@
+@layout('layouts/example')
+
+@section('content')
+<div class="p-16 space-y-8">
+  <div class="p-8">
+    @!component('components/examples/tailwind/carousel/basic')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/carousel/control')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/carousel/cross-fade')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/carousel/dark-variant')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/carousel/indicator')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/carousel/slide')
+  </div>
+</div>
+@endsection

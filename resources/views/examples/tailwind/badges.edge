@@ -1,0 +1,26 @@
+@layout('layouts/example')
+
+@section('content')
+<div class="p-16 space-y-8">
+  {{--  badges  --}}
+  <div class="p-8">
+    @!component('components/examples/tailwind/badges/index')
+  </div>
+  {{--  badges button  --}}
+  <div class="p-8">
+    @!component('components/examples/tailwind/badges/button')
+  </div>
+  {{--  badges colors  --}}
+  <div class="p-8">
+    @!component('components/examples/tailwind/badges/colors')
+  </div>
+  {{--  badges pils  --}}
+  <div class="p-8">
+    @!component('components/examples/tailwind/badges/pils')
+  </div>
+  {{--  badges sizes  --}}
+  <div class="p-8">
+    @!component('components/examples/tailwind/badges/sizes')
+  </div>
+</div>
+@endsection

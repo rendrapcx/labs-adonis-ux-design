@@ -25,14 +25,34 @@ Route.get('/', async ({ view }) => {
 })
 
 Route.get('/alpine', async ({ view }) => {
-  return view.render('examples/alpine')
+  return view.render('examples/alpine/alpine')
 })
 
-Route.get('/tailwind', async ({ view }) => {
-  return view.render('examples/tailwind')
-})
+Route.group(() => {
+  Route.get('/', async ({ view }) => { return view.render('examples/tailwind/index') }).as('tws.index')
+  Route.get('/alert', async ({ view }) => { return view.render('examples/tailwind/alert') }).as('tws.alert')
+  Route.get('/avatar', async ({ view }) => { return view.render('examples/tailwind/avatar') }).as('tws.avatar')
+  Route.get('/badges', async ({ view }) => { return view.render('examples/tailwind/badges') }).as('tws.badges')
+  Route.get('/button-group', async ({ view }) => { return view.render('examples/tailwind/button-group') }).as('tws.button.group')
+  Route.get('/button', async ({ view }) => { return view.render('examples/tailwind/button') }).as('tws.button')
+  Route.get('/card', async ({ view }) => { return view.render('examples/tailwind/card') }).as('tws.card')
+  Route.get('/carousel', async ({ view }) => { return view.render('examples/tailwind/carousel') }).as('tws.carousel')
+  Route.get('/chart', async ({ view }) => { return view.render('examples/tailwind/chart') }).as('tws.chart')
+}).prefix('/tailwind')
 
 Route.get('/hyperui', async ({ view }) => {
-  return view.render('examples/hyperui')
+  return view.render('examples/hyperui/hyperui')
 })
+
+Route.group(() => {
+  Route.get('/', async ({ view }) => {
+    return view.render('examples/mix/index')
+  })
+}).prefix('/mix')
+
+Route.group(() => {
+  Route.get('/', async ({ view }) => {
+    return view.render('examples/index')
+  })
+}).prefix('/examples')
 
