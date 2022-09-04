@@ -1,8 +1,15 @@
 @layout('layouts/example')
 
 @section('content')
-<div>
-  <h1>dropdown-button</h1>
-  @!component('components/examples/alpine/dropdown')
+<div x-data="showModal" @keydown.escape="showModal = false">
+  <div><button x-on:click="toggleModal">TES</button></div>
+  <div class="" x-cloak x-show="showModal">
+    @!component('components/modal/alp-warning', {
+    dialogTitle: "Ari maneh geus yakin?",
+    dialogMessage: `Silakan melakukan pendaftaran melalui https://www.test.com untuk bisa melakukan transaksi`,
+    btnYes: "OK"
+    })
+  </div>
 </div>
+
 @endsection

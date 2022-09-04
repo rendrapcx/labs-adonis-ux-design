@@ -17,6 +17,14 @@
     })
   </header>
 
+  <div x-data="showModal" x-on:click.outside="closeModal">
+    <button x-on:click="toggleModal">Toggle Dropdown</button>
+
+    <div class="w-full justify-center items-center" x-show="showModal" x-transition>
+      @!component('components/modal/simple')
+    </div>
+  </div>
+
   <main>
     <div class="bg-gray-200 mt-8 mb-8 p-8">
       <article class="prose lg:prose-xl">

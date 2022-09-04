@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+  display: none !important;
+}
+
 /* html, body {
   background-color: #F7F8FA;
   font-family: 'Poppins', sans-serif;

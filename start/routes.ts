@@ -32,3 +32,7 @@ Route.get('/tailwind', async ({ view }) => {
   return view.render('examples/tailwind')
 })
 
+Route.get('/hyperui', async ({ view }) => {
+  return view.render('examples/hyperui')
+})
+
