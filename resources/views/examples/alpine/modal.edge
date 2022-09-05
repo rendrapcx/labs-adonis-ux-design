@@ -1,0 +1,18 @@
+@layout('layouts/alpine')
+
+@section('contents')
+<div class="w-full h-screen items-center justify-center">
+  <div x-data="showModal" @keydown.escape="toggleModal" class="item">
+    <div x-on:click="toggleModal">
+      @!form.button({btnText: 'Warning'})
+    </div>
+    <template class="" x-cloak x-if="showModal">
+      @!component('components/modal/alp-warning', {
+      dialogTitle: "Ari maneh geus yakin?",
+      dialogMessage: `Silakan melakukan pendaftaran melalui https://www.test.com untuk bisa melakukan transaksi`,
+      btnYes: "OK"
+      })
+    </template>
+  </div>
+</div>
+@endsection

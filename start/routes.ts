@@ -24,9 +24,14 @@ Route.get('/', async ({ view }) => {
   return view.render('welcome')
 })
 
-Route.get('/alpine', async ({ view }) => {
-  return view.render('examples/alpine/alpine')
-})
+Route.group(() => {
+  Route.get('/', async ({ view }) => { return view.render('examples/alpine/index') }).as('alpine.index')
+  Route.get('/accordion', async ({ view }) => { return view.render('examples/alpine/accordion') }).as('alpine.accordion')
+  Route.get('/navbar', async ({ view }) => { return view.render('examples/alpine/navbar') }).as('alpine.navbar')
+  Route.get('/sidebar', async ({ view }) => { return view.render('examples/alpine/sidebar') }).as('alpine.sidebar')
+  Route.get('/timeline', async ({ view }) => { return view.render('examples/alpine/timeline') }).as('alpine.timeline')
+  Route.get('/modal', async ({ view }) => { return view.render('examples/alpine/modal') }).as('alpine.modal')
+}).prefix('/alpine')
 
 Route.group(() => {
   Route.get('/', async ({ view }) => { return view.render('examples/tailwind/index') }).as('tws.index')
@@ -38,6 +43,17 @@ Route.group(() => {
   Route.get('/card', async ({ view }) => { return view.render('examples/tailwind/card') }).as('tws.card')
   Route.get('/carousel', async ({ view }) => { return view.render('examples/tailwind/carousel') }).as('tws.carousel')
   Route.get('/chart', async ({ view }) => { return view.render('examples/tailwind/chart') }).as('tws.chart')
+  Route.get('/chips', async ({ view }) => { return view.render('examples/tailwind/chips') }).as('tws.chips')
+  Route.get('/collapse', async ({ view }) => { return view.render('examples/tailwind/collapse') }).as('tws.collapse')
+  Route.get('/drawer', async ({ view }) => { return view.render('examples/tailwind/drawer') }).as('tws.drawer')
+  Route.get('/dropdown', async ({ view }) => { return view.render('examples/tailwind/dropdown') }).as('tws.dropdown')
+  Route.get('/gallery', async ({ view }) => { return view.render('examples/tailwind/gallery') }).as('tws.gallery')
+  Route.get('/headers', async ({ view }) => { return view.render('examples/tailwind/headers') }).as('tws.headers')
+  Route.get('/heading', async ({ view }) => { return view.render('examples/tailwind/heading') }).as('tws.heading')
+  Route.get('/hover-effect', async ({ view }) => { return view.render('examples/tailwind/hover-effect') }).as('tws.hover.effect')
+  Route.get('/icons', async ({ view }) => { return view.render('examples/tailwind/icons') }).as('tws.icons')
+  Route.get('/images', async ({ view }) => { return view.render('examples/tailwind/images') }).as('tws.images')
+  Route.get('/jumbotron', async ({ view }) => { return view.render('examples/tailwind/jumbotron') }).as('tws.jumbotron')
 }).prefix('/tailwind')
 
 Route.get('/hyperui', async ({ view }) => {

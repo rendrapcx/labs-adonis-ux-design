@@ -1,0 +1,18 @@
+@layout('layouts/example')
+
+@section('content')
+<div class="p-16 space-y-4">
+  <div class="p-8">
+    @!component('components/examples/tailwind/collapse/basic')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/collapse/horizontal')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/collapse/multiple-target')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/collapse/with-scroll')
+  </div>
+</div>
+@endsection

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  @entryPointStyles('app')
+  @entryPointScripts('app')
+
+  <style>
+    [x-cloak] {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="flex">
+    <div>
+      @!component('components/alpine/sidebar/base')
+    </div>
+    <div>
+      {{--  @!component('components/alpine/navbar/base')  --}}
+      <div>
+        @!section('contents')
+      </div>
+    </div>
+  </div>
+
+  @!section('scripts')
+
+</body>
+
+</html>

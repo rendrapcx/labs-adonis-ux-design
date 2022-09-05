@@ -1,0 +1,15 @@
+@layout('layouts/example')
+
+@section('content')
+<div class="p-16 space-y-8">
+  <div class="p-8">
+    @!component('components/examples/tailwind/gallery/basic')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/gallery/carousel')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/gallery/mix')
+  </div>
+</div>
+@endsection

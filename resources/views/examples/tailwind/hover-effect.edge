@@ -1,0 +1,21 @@
+@layout('layouts/example')
+
+@section('content')
+<div class="p-16 space-y-8">
+  <div class="p-8">
+    @!component('components/examples/tailwind/hover-effect/basic')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/hover-effect/color')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/hover-effect/gradient')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/hover-effect/shadow')
+  </div>
+  <div class="p-8">
+    @!component('components/examples/tailwind/hover-effect/zoom')
+  </div>
+</div>
+@endsection
