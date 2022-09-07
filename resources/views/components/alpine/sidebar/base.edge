@@ -36,8 +36,8 @@
         </svg>
       </button>
       <!-- Home -->
-      <div x-data="tooltip" x-on:mouseover="show = true" x-on:mouseleave="show = false"
-        @click="$store.sidebar.active = 'home' "
+      <a href="{{route('alpine.dashboard')}}" x-data="tooltip" x-on:mouseover="show = true"
+        x-on:mouseleave="show = false" @click="$store.sidebar.active = 'home' "
         class=" relative flex items-center hover:text-gray-200 hover:bg-gray-800 space-x-2 rounded-md p-2 cursor-pointer"
         x-bind:class="{'justify-start': $store.sidebar.full, 'sm:justify-center':!$store.sidebar.full,'text-gray-200 bg-gray-800':$store.sidebar.active == 'home','text-gray-400 ':$store.sidebar.active != 'home'}">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -47,7 +47,7 @@
         <h1 x-cloak
           x-bind:class="!$store.sidebar.full && show ? visibleClass :'' || !$store.sidebar.full && !show ? 'sm:hidden':''">
           Dashboard</h1>
-      </div>
+      </a>
 
       <!-- Audience -->
       <div x-data="dropdown" class="relative">
@@ -83,8 +83,8 @@
       </div>
 
       <!-- Posts -->
-      <div @click="$store.sidebar.active = 'posts' " x-data="tooltip" x-on:mouseover="show = true"
-        x-on:mouseleave="show = false"
+      <a href="{{route('alpine.post')}}" @click="$store.sidebar.active = 'posts' " x-data="tooltip"
+        x-on:mouseover="show = true" x-on:mouseleave="show = false"
         class=" relative flex justify-between items-center text-gray-400 hover:text-gray-200 hover:bg-gray-800 space-x-2 rounded-md p-2 cursor-pointer"
         x-bind:class="{'justify-start': $store.sidebar.full, 'sm:justify-center':!$store.sidebar.full,'text-gray-200 bg-gray-800':$store.sidebar.active == 'posts','text-gray-400 ':$store.sidebar.active != 'posts'}">
         <div class="flex  items-center space-x-2">
@@ -98,7 +98,7 @@
         </div>
         <h1 x-cloak x-bind:class="$store.sidebar.full ? '' :'sm:hidden'"
           class="w-5 h-5 p-1 bg-green-400 rounded-sm text-sm leading-3 text-center text-gray-900">8</h1>
-      </div>
+      </a>
 
       <!-- Schedules -->
       <div @click="$store.sidebar.active = 'home' " x-data="tooltip" x-on:mouseover="show = true"

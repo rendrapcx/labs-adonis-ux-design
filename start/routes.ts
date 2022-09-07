@@ -31,6 +31,8 @@ Route.group(() => {
   Route.get('/sidebar', async ({ view }) => { return view.render('examples/alpine/sidebar') }).as('alpine.sidebar')
   Route.get('/timeline', async ({ view }) => { return view.render('examples/alpine/timeline') }).as('alpine.timeline')
   Route.get('/modal', async ({ view }) => { return view.render('examples/alpine/modal') }).as('alpine.modal')
+  Route.get('/dashboard', async ({ view }) => { return view.render('examples/alpine/dashboard') }).as('alpine.dashboard')
+  Route.get('/post', async ({ view }) => { return view.render('examples/alpine/post') }).as('alpine.post')
 }).prefix('/alpine')
 
 Route.group(() => {
@@ -54,6 +56,7 @@ Route.group(() => {
   Route.get('/icons', async ({ view }) => { return view.render('examples/tailwind/icons') }).as('tws.icons')
   Route.get('/images', async ({ view }) => { return view.render('examples/tailwind/images') }).as('tws.images')
   Route.get('/jumbotron', async ({ view }) => { return view.render('examples/tailwind/jumbotron') }).as('tws.jumbotron')
+  Route.get('/inputs', async ({ view }) => { return view.render('examples/tailwind/inputs') }).as('tws.inputs')
 }).prefix('/tailwind')
 
 Route.get('/hyperui', async ({ view }) => {
