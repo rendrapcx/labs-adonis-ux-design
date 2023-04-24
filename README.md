@@ -1,4 +1,16 @@
-## LOGS
+## After Clone
+- clone
+- npm ci
+- cp .env.example .env
+- node ace list:routes
+- node ace serve
+
+goto: server_address/examples
+
+Note: kelamaan terbengkalai jadi lupa lagi todo nya ini wkwkwk
+
+
+## Labs Logs
 ### 1. Creating New Project
 ```bash
 npm init adonis-ts-app@latest adonis-ux-design
